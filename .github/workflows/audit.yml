@@ -1,0 +1,33 @@
+name: AutoNIST-Audit CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  run-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - run: pip install pyyaml requests psutil
+        
+    - name: Run audits
+      run: |
+        python src/main.py --init
+        python src/main.py --target windows
+        python src/main.py --target linux
+        python src/main.py --target all
+        
+    - name: Upload reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: audit-reports
+        path: reports/

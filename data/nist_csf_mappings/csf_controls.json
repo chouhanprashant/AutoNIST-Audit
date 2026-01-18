@@ -1,0 +1,23 @@
+{
+  "framework": "NIST CSF 2.0",
+  "version": "2.0",
+  "functions": [
+    {
+      "id": "ID",
+      "name": "Identify",
+      "categories": [
+        {
+          "id": "ID.AM",
+          "name": "Asset Management",
+          "controls": [
+            {
+              "id": "ID.AM-1",
+              "name": "Physical devices and systems are inventoried",
+              "description": "The organization identifies and documents physical devices and systems within the organization."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

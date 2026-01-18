@@ -1,6 +1,9 @@
 # AutoNIST-Audit
-## Automated NIST CSF Audit Tool
 
-Usage: python src/main.py --target windows
+## Run on GitHub:
+https://github.com/chouhanprashant/AutoNIST-Audit/actions
 
-GitHub: https://github.com/chouhanprashant/AutoNIST-Audit
+Click "Run workflow" to execute audit.
+
+## Local use:
+python src/main.py --target windows
