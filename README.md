@@ -1,5 +1,5 @@
 # AutoNIST-Audit
-## NIST Cybersecurity Framework Audit Tool
+## Automated NIST CSF Audit Tool
 
 Usage: python src/main.py --target windows
 
